@@ -3,29 +3,30 @@
 
 Console.Clear();
 
+double getUser(string message)
+{
+    Console.WriteLine(message);
+    double result = double.Parse(Console.ReadLine()!);
+    return result;
+}
+
 double Distance(double x1, double y1, double z1, double x2, double y2, double z2)
 {
     double distance = Math.Sqrt(Math.Pow(x2-x1, 2) + Math.Pow(y2-y1, 2) + Math.Pow(z2-z1, 2));
     return distance;
 }
 
-Console.WriteLine("Введите х1: ");
-double x1 = double.Parse(Console.ReadLine()!);
+double x1 = getUser("Введите х1: ");
 Console.Clear();
-Console.WriteLine("Введите y1: ");
-double y1 = double.Parse(Console.ReadLine()!);
+double y1 = getUser("Введите y1: ");
 Console.Clear();
-Console.WriteLine("Введите z1: ");
-double z1 = double.Parse(Console.ReadLine()!);
+double z1 = getUser("Введите z1: ");
 Console.Clear();
-Console.WriteLine("Введите х2: ");
-double x2 = double.Parse(Console.ReadLine()!);
+double x2 = getUser("Введите х2: ");
 Console.Clear();
-Console.WriteLine("Введите y2: ");
-double y2 = double.Parse(Console.ReadLine()!);
+double y2 = getUser("Введите y2: ");
 Console.Clear();
-Console.WriteLine("Введите z2: ");
-double z2 = double.Parse(Console.ReadLine()!);
+double z2 = getUser("Введите z2: ");
 Console.Clear();
 
 double dis = Distance(x1, y1, z1, x2, y2, z2);
